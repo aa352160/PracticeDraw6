@@ -94,7 +94,7 @@ public class Practice07Interpolator extends LinearLayout {
                                     public void run() {
                                         imageView.setTranslationX(0);
                                     }
-                                }, 500);
+                                }, 3000);
                             }
                         });
             }

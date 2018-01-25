@@ -1,6 +1,7 @@
 package com.hencoder.hencoderpracticedraw6.practice;
 
 import android.content.Context;
+import android.os.Build;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -9,10 +10,13 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.hencoder.hencoderpracticedraw6.R;
+import com.hencoder.hencoderpracticedraw6.Utils;
 
 public class Practice02Rotation extends RelativeLayout {
     Button animateBt;
     ImageView imageView;
+
+    private int clickNum = 0;
 
     public Practice02Rotation(Context context) {
         super(context);
@@ -37,6 +41,28 @@ public class Practice02Rotation extends RelativeLayout {
             @Override
             public void onClick(final View v) {
                 // // TODO 在这里处理点击事件，通过 View.animate().rotation/X/Y() 来让 View 旋转
+                switch (clickNum % 6) {
+                    case 0:
+                        imageView.animate().rotationBy(180);
+                        break;
+                    case 1:
+                        imageView.animate().rotationBy(-180);
+                        break;
+                    case 2:
+                        imageView.animate().rotationXBy(180);
+                        break;
+                    case 3:
+                        imageView.animate().rotationXBy(-180);
+                        break;
+                    case 4:
+                        imageView.animate().rotationYBy(180);
+                        break;
+                    case 5:
+                        imageView.animate().rotationYBy(-180);
+                        break;
+                }
+
+                clickNum++;
             }
         });
     }
