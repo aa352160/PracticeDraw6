@@ -23,7 +23,7 @@ import com.hencoder.hencoderpracticedraw6.R;
  * Created by Administrator on 2018/1/26.
  */
 
-public class CustomerPractice extends View{
+public class CustomPractice extends View{
     private Paint bitmapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private Paint paint1 = new Paint(Paint.ANTI_ALIAS_FLAG);
     private Bitmap bitmap;
@@ -66,15 +66,15 @@ public class CustomerPractice extends View{
         animatorSet.end();
     }
 
-    public CustomerPractice(Context context) {
+    public CustomPractice(Context context) {
         super(context);
     }
 
-    public CustomerPractice(Context context, @Nullable AttributeSet attrs) {
+    public CustomPractice(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CustomerPractice(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CustomPractice(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
