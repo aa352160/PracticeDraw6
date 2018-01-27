@@ -8,6 +8,7 @@
     <string name="title_duration">setDuration()</string>
     <string name="title_interpolator">setInterpolator()</string>
     <string name="title_object_animator">ObjectAnimator</string>
+    <string name="title_customer_animator">CustomerAnimator</string>
     <string name="title_before_on_draw_foreground">onDrawForeground()-前插</string>
     <string name="title_after_draw">draw()-后插</string>
     <string name="title_before_draw">draw()-前插</string>
