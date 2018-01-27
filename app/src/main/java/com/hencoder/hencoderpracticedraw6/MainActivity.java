@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         pageModels.add(new PageModel(R.layout.sample_duration, R.string.title_duration, R.layout.practice_duration));
         pageModels.add(new PageModel(R.layout.sample_interpolator, R.string.title_interpolator, R.layout.practice_interpolator));
         pageModels.add(new PageModel(R.layout.sample_object_anomator, R.string.title_object_animator, R.layout.practice_object_animator));
-        pageModels.add(new PageModel(R.layout.sample_object_anomator, R.string.title_customer_animator, R.layout.practice_customer_animator));
     }
 
     @Override
