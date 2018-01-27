@@ -40,17 +40,23 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public Fragment getItem(int position) {
+                if (position==this.getCount()-1){
+                    return CustomPracticeFragment.newInstance();
+                }
                 PageModel pageModel = pageModels.get(position);
                 return PageFragment.newInstance(pageModel.sampleLayoutRes, pageModel.practiceLayoutRes);
             }
 
             @Override
             public int getCount() {
-                return pageModels.size();
+                return pageModels.size()+1;
             }
 
             @Override
             public CharSequence getPageTitle(int position) {
+                if (position==this.getCount()-1){
+                    return getString(R.string.title_customer_animator);
+                }
                 return getString(pageModels.get(position).titleRes);
             }
         });

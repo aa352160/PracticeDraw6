@@ -15,7 +15,9 @@ import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
+import android.view.animation.OvershootInterpolator;
 
 import com.hencoder.hencoderpracticedraw6.R;
 
@@ -49,7 +51,8 @@ public class CustomPractice extends View{
         paint1.setStyle(Paint.Style.FILL);
 
         ObjectAnimator animator1 = ObjectAnimator.ofInt(this, "degree1", 0, 45).setDuration(2000);
-        ObjectAnimator animator2 = ObjectAnimator.ofInt(this, "rotate", 270, 0).setDuration(3000);
+        ObjectAnimator animator2 = ObjectAnimator.ofInt(this, "rotate", 270, 0).setDuration(2000);
+        animator2.setInterpolator(new DecelerateInterpolator());
         ObjectAnimator animator3 = ObjectAnimator.ofInt(this, "degree2", 0, 45).setDuration(2000);
         animatorSet.playSequentially(animator1,animator2,animator3);
     }
@@ -152,5 +155,14 @@ public class CustomPractice extends View{
     public void setRotate(int rotate) {
         this.rotate = rotate;
         invalidate();
+    }
+
+    public void startAnim(){
+        animatorSet.end();
+        rotate = 270;
+        degree1 = 0;
+        degree2 = 0;
+        invalidate();
+        animatorSet.start();
     }
 }
